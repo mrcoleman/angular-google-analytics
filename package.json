@@ -20,7 +20,9 @@
     "npm": "*"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "jasmine-core": "^2.5.2"
+  },
   "devDependencies": {
     "bower": "*",
     "karma": "*",

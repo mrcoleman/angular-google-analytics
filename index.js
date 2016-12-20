@@ -164,7 +164,7 @@
       };
 
       this.setSiteSpeedSampleRate = function (val) {
-        siteSpeedSampleRate = !!val;
+        siteSpeedSampleRate = val;
         return this;
       };
 
