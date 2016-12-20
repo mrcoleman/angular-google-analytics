@@ -297,6 +297,14 @@ to the official [angular ngRoute documentation](https://docs.angularjs.org/api/n
 
 If set to a truthy value then each account object will disable protocol checking and all injected scripts will use the HTTPS protocol.
 
+### Set Site Speed Sample rate
+```js
+   // Set the site speed sampling rate
+   AnalyticsProvider.siteSpeedSampleRate(50);
+```
+
+Sets the percentage of page views should be used to test the site speed. By default Google uses 1%.
+
 ### Delay Script Tag Insertion and Tracker Setup
 ```js
   // Must manually call registerScriptTags method in order to insert the Google Analytics scripts on the page.

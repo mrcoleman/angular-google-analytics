@@ -40,6 +40,7 @@
           pageEvent = '$routeChangeSuccess',
           readFromRoute = false,
           removeRegExp,
+          siteSpeedSampleRate,
           testMode = false,
           traceDebuggingMode = false,
           trackPrefix = '',
@@ -159,6 +160,11 @@
 
       this.setHybridMobileSupport = function (val) {
         hybridMobileSupport = !!val;
+        return this;
+      };
+
+      this.setSiteSpeedSampleRate = function (val) {
+        siteSpeedSampleRate = !!val;
         return this;
       };
 
@@ -537,6 +543,11 @@
               if (trackerObj.crossDomainLinker === true) {
                 fields.allowLinker = true;
               }
+              
+              if(siteSpeedSampleRate) {
+                fields.siteSpeedSampleRate = siteSpeedSampleRate;
+              }              
+              
               if (isPropertyDefined('name', trackerObj)) {
                 fields.name = trackerObj.name;
               }
