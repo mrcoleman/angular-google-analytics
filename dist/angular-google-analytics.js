@@ -174,7 +174,7 @@
       this.setSiteSpeedSampleRate = function (val) {
         siteSpeedSampleRate = !!val;
         return this;
-      }
+      };
 
       this.startOffline = function (val) {
         offlineMode = !!val;
@@ -531,13 +531,10 @@
               trackerObj.set = isPropertyDefined('set', trackerObj) ? trackerObj.set : {};
               trackerObj.trackEcommerce = isPropertyDefined('trackEcommerce', trackerObj) ? trackerObj.trackEcommerce : ecommerce;
               trackerObj.trackEvent = isPropertyDefined('trackEvent', trackerObj) ? trackerObj.trackEvent : false;
-              
+
               // Logic to choose the account fields to be used.
               // cookieConfig is being deprecated for a tracker specific property: fields.
               var fields = {};
-              
-             
-
               if (isPropertyDefined('fields', trackerObj)) {
                 fields = trackerObj.fields;
               } else if (isPropertyDefined('cookieConfig', trackerObj)) {
