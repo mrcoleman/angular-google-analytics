@@ -164,7 +164,9 @@
       };
 
       this.setSiteSpeedSampleRate = function (val) {
-        siteSpeedSampleRate = !!val;
+        if(typeof(val) == number) {
+          siteSpeedSampleRate = val;
+        }
         return this;
       };
 
